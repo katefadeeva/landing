@@ -6,8 +6,29 @@
   background-repeat: no-repeat;
 }
 
+.tool-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    >.tool {
+      flex-basis: 43%;
+      margin-bottom: 47px;
+    }
+  }
+  @include media-mobile {
+    >.tool {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.tool {
+  @include media-tablet {
+    text-align: center;
+  }
+}
+
 .tools__title {
-  max-width: 462px;
+  max-width: 475px;
   margin: auto;
   text-align: center;
   margin-bottom: 70px;
@@ -16,6 +37,9 @@
 .tools__button {
   margin-top: 60px;
   text-align: center;
+  @include media-tablet {
+    margin-top: 0;
+  }
 }
 
 // Tool
