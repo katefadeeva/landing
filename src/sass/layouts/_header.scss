@@ -13,8 +13,21 @@
   }
 }
 
-.header__logo-line {
+.header__logo-line  {
   display: flex;
+  @include media-mobile {
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+  }
+}
+
+.header__hamburger {
+  margin-right: 37px;
+  @include media-mobile {
+    position: absolute;
+    left: 0;
+  }
 }
 
 .header__buttons {
@@ -29,5 +42,3 @@
     display: none;
   }
 }
-
-

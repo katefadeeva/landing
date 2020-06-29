@@ -6,7 +6,7 @@
 
 .navigation__link {
   list-style: none;
-  padding: 0 15px;
+  padding: 0 10px;
   cursor: pointer;
   @extend %transition;
   &:hover {
