@@ -24,7 +24,7 @@
 .strategy-wrapper {
   >* {
     margin-bottom: 30px;
-    @include media-tablet {
+    @include media-bigtablet {
       flex-basis: 48%;
     }
     @include media-mobile {
@@ -41,9 +41,8 @@
   &_hidden {
     display: none;
   }
-  @include media-tablet {
+  @include media-bigtablet {
     overflow: hidden;
-    padding-top: 200px;
   }
 }
 
@@ -61,16 +60,17 @@
 }
 
 .strategy__image {
-  @include media-tablet {
-    position: absolute;
-    top: 0;
+  @include media-bigtablet {
+    position: static;
+    width: 100%;
+
   }
 }
 
 .article-modal__content {
   .strategy__image {
     width: 100%;
-    @include media-tablet {
+    @include media-bigtablet {
       position: static;
     }
   }
