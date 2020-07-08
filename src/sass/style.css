@@ -1337,12 +1337,27 @@ h5 {
 .employee-container {
   padding-right: 32px;
 }
+@media (max-width: 1024px) {
+  .employee-container {
+    width: 1197px;
+    overflow: hidden;
+    transform: translate3d(-12%, 0px, 0px);
+  }
+}
 
 .employee {
   display: flex;
   padding: 35px;
   position: relative;
   width: calc(30% - $image-gap);
+  transform: scale3d(1, 1, 1);
+}
+@media (max-width: 1024px) {
+  .employee_selected {
+    opacity: 0.6;
+    transform: scale3d(0.8, 0.8, 1);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .employee__name {

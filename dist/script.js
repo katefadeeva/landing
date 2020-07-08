@@ -1,1 +1,559 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var i=e[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(o,i,function(e){return t[e]}.bind(null,i));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=0)}([function(t,e,n){"use strict";function o(t,e){if(null==t)return{};var n,o,i=function(t,e){if(null==t)return{};var n,o,i={},r=Object.keys(t);for(o=0;o<r.length;o++)n=r[o],e.indexOf(n)>=0||(i[n]=t[n]);return i}(t,e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(t);for(o=0;o<r.length;o++)n=r[o],e.indexOf(n)>=0||Object.prototype.propertyIsEnumerable.call(t,n)&&(i[n]=t[n])}return i}function i(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}n.r(e);var r=function(){function t(e){var n=e.id,i=e.title,r=e.urlToImage,a=e.tags;o(e,["id","title","urlToImage","tags"]);!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.id=n,this.title=i,this.urlToImage=r,this.tags=a}var e,n,r;return e=t,(n=[{key:"generateArticle",value:function(){var t="",e=document.createElement("article");return e.className="strategy block-shadowed",e.setAttribute("data-id",this.id),this.urlToImage&&(t+='<img class="strategy__image" src='.concat(this.urlToImage,' alt="strategy">')),(this.title||this.tags)&&(t+='<div class="strategy__content">',this.title&&(t+='<h3 class="strategy__name">'.concat(this.title,"</h3>")),this.tags&&(t+='<div class="strategy__tags tags">',this.tags.map((function(e){t+='<span class="tag tag_colored">'.concat(e,"</span>")})),t+="</div>"),t+="</div>"),e.innerHTML=t,e}}])&&i(e.prototype,n),r&&i(e,r),t}();function a(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function s(t){return(s="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function c(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function l(t,e,n){return(l="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var o=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=y(t)););return t}(t,e);if(o){var i=Object.getOwnPropertyDescriptor(o,e);return i.get?i.get.call(n):i.value}})(t,e,n||t)}function u(t,e){return(u=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function f(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,o=y(t);if(e){var i=y(this).constructor;n=Reflect.construct(o,arguments,i)}else n=o.apply(this,arguments);return d(this,n)}}function d(t,e){return!e||"object"!==s(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function y(t){return(y=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}var h=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&u(t,e)}(r,t);var e,n,o,i=f(r);function r(t,e){var n,o=e.id,a=e.title,s=e.urlToImage,c=e.tags,l=e.content,u=e.date;return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,r),(n=i.call(this,t)).id=o,n.title=a,n.urlToImage=s,n.tags=c,n.content=l,n.date=u,n}return e=r,(n=[{key:"generateContent",value:function(){var t="",e=document.createElement("div");return e.className="article-modal__content",this.urlToImage&&(t+='<img class="strategy__image" src='.concat(this.urlToImage,' alt="strategy">')),(this.title||this.tags||this.content||this.date)&&(t+='<div class="strategy__content">',this.date&&(t+='<p class="strategy__date">'.concat(this.date,"</p>")),this.title&&(t+='<h3 class="strategy__name">'.concat(this.title,"</h3>")),this.content&&(t+='<p class="strategy__text">'.concat(this.content,"</p>")),this.tags&&(t+='<div class="strategy__tags tags">',this.tags.map((function(e){t+='<span class="tag tag_colored">'.concat(e,"</span>")})),t+="</div>"),t+="</div>"),e.innerHTML=t,e}},{key:"renderModal",value:function(){var t=this.generateContent();l(y(r.prototype),"buildModal",this).call(this,t)}}])&&c(e.prototype,n),o&&c(e,o),r}(function(){function t(e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.classes=e,this.modal="",this.modalContent="",this.modalCloseBtn="",this.overlay=""}var e,n,o;return e=t,(n=[{key:"buildModal",value:function(t){this.overlay=this.createDomNode(this.overlay,"div","overlay","overlay_modal"),this.modal=this.createDomNode(this.modal,"div","modal",this.classes),this.modalContent=this.createDomNode(this.modalContent,"div","modal__content"),this.modalCloseBtn=this.createDomNode(this.modalCloseBtn,"span","modal__close-icon"),this.modalCloseBtn.innerHTML='<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4239 10.5172L20.6009 2.33999C21.1331 1.80809 21.1331 0.948089 20.6009 0.416194C20.069 -0.115701 19.209 -0.115701 18.6771 0.416194L10.4999 8.59343L2.3229 0.416194C1.79076 -0.115701 0.931004 -0.115701 0.399108 0.416194C-0.133036 0.948089 -0.133036 1.80809 0.399108 2.33999L8.5761 10.5172L0.399108 18.6945C-0.133036 19.2263 -0.133036 20.0863 0.399108 20.6182C0.664184 20.8836 1.01272 21.0169 1.361 21.0169C1.70929 21.0169 2.05758 20.8836 2.3229 20.6182L10.4999 12.441L18.6771 20.6182C18.9425 20.8836 19.2907 21.0169 19.639 21.0169C19.9873 21.0169 20.3356 20.8836 20.6009 20.6182C21.1331 20.0863 21.1331 19.2263 20.6009 18.6945L12.4239 10.5172Z" fill="#2F281E"/></svg>',this.setContent(t),this.appendModalElements(),this.bindEvents(),this.openModal()}},{key:"createDomNode",value:function(t,e){var n;t=document.createElement(e);for(var o=arguments.length,i=new Array(o>2?o-2:0),r=2;r<o;r++)i[r-2]=arguments[r];return(n=t.classList).add.apply(n,i),t}},{key:"setContent",value:function(t){"string"==typeof t?this.modalContent.innerHTML=t:(this.modalContent.innerHTML="",this.modalContent.appendChild(t))}},{key:"appendModalElements",value:function(){this.modal.append(this.modalCloseBtn),this.modal.append(this.modalContent),this.overlay.append(this.modal)}},{key:"bindEvents",value:function(){this.modalCloseBtn.addEventListener("click",this.closeModal),this.overlay.addEventListener("click",this.closeModal)}},{key:"openModal",value:function(){document.body.append(this.overlay)}},{key:"closeModal",value:function(t){var e=t.target.classList;(e.contains("overlay")||e.contains("modal__close-icon"))&&document.querySelector(".overlay").remove()}}])&&a(e.prototype,n),o&&a(e,o),t}()),g=[{id:1,title:"Increasing Prosperity With Positive Thinking",urlToImage:"./src/img/strategies/1.jpg",tags:["Art","Design"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:2,title:"Motivation Is The First Step To Success",urlToImage:"./src/img/strategies/2.jpg",tags:["Culture"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:3,title:"Success Steps For Your Personal Or Business Life",urlToImage:"./src/img/strategies/3.jpg",tags:["Culture","Design","Art"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:4,title:"Increasing Prosperity With Positive Thinking",urlToImage:"./src/img/strategies/5.jpg",tags:["Design"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:5,title:"Increasing Prosperity With Positive Thinking",urlToImage:"./src/img/strategies/5.jpg",tags:["Design"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:6,title:"Increasing Prosperity With Positive Thinking",urlToImage:"./src/img/strategies/1.jpg",tags:["Art","Design"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:7,title:"Motivation Is The First Step To Success",urlToImage:"./src/img/strategies/2.jpg",tags:["Culture"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"},{id:8,title:"Success Steps For Your Personal Or Business Life",urlToImage:"./src/img/strategies/3.jpg",tags:["Culture","Design","Art"],content:"Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",date:"01.01.2020"}];window.onload=function(){g&&_(),p()};var p=function(){document.querySelector(".strategies__tags").addEventListener("click",(function(t){if(t.target.classList.contains("tag")){var e=t.target;m(),v(e),"All"===e.innerText?w():b(e.innerText)}}))},m=function(){document.querySelectorAll(".strategies__tags .tag").forEach((function(t){t.classList.remove("tag_selected"),t.classList.add("tag_bordered")}))},v=function(t){t.classList.add("tag_selected"),t.classList.remove("tag_bordered")},w=function(){document.querySelectorAll(".strategy-wrapper .strategy").forEach((function(t){t.classList.remove("strategy_hidden")}))},b=function(t){document.querySelectorAll(".strategy-wrapper .strategy").forEach((function(e){e.classList.add("strategy_hidden"),e.querySelectorAll(".tag").forEach((function(n){n.innerText===t&&e.classList.remove("strategy_hidden")}))}))},_=function(){var t=j();W(g).forEach((function(e){t.append(e.generateArticle())})),I()},j=function(){var t=document.querySelector(".strategy-wrapper");return t.innerHTML="",t},W=function(t){var e=[];return t.forEach((function(t){e.push(new r(t))})),e},I=function(){document.querySelector(".strategy-wrapper").addEventListener("click",(function(t){if(t.target.closest(".strategy")){var e=t.target.closest(".strategy").getAttribute("data-id"),n=T(e);k(n)}}))},T=function(t){return g.find((function(e){return e.id==t}))},k=function(t){new h("article-modal",t).renderModal()}}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _js_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/Article */ "./src/js/Article.js");
+/* harmony import */ var _js_ArticleModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/ArticleModal */ "./src/js/ArticleModal.js");
+/* harmony import */ var _js_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/Modal */ "./src/js/Modal.js");
+
+
+
+var data = [{
+  id: 1,
+  title: 'Increasing Prosperity With Positive Thinking',
+  urlToImage: './src/img/strategies/1.jpg',
+  tags: ['Art', 'Design'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 2,
+  title: 'Motivation Is The First Step To Success',
+  urlToImage: './src/img/strategies/2.jpg',
+  tags: ['Culture'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 3,
+  title: 'Success Steps For Your Personal Or Business Life',
+  urlToImage: './src/img/strategies/3.jpg',
+  tags: ['Culture', 'Design', 'Art'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 4,
+  title: 'Increasing Prosperity With Positive Thinking',
+  urlToImage: './src/img/strategies/5.jpg',
+  tags: ['Design'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 5,
+  title: 'Increasing Prosperity With Positive Thinking',
+  urlToImage: './src/img/strategies/5.jpg',
+  tags: ['Design'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 6,
+  title: 'Increasing Prosperity With Positive Thinking',
+  urlToImage: './src/img/strategies/1.jpg',
+  tags: ['Art', 'Design'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 7,
+  title: 'Motivation Is The First Step To Success',
+  urlToImage: './src/img/strategies/2.jpg',
+  tags: ['Culture'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}, {
+  id: 8,
+  title: 'Success Steps For Your Personal Or Business Life',
+  urlToImage: './src/img/strategies/3.jpg',
+  tags: ['Culture', 'Design', 'Art'],
+  content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
+  date: '01.01.2020'
+}];
+
+window.onload = function () {
+  // Render Articles
+  if (data) {
+    renderArticlesToDom();
+  }
+
+  ; // Tags
+
+  addTagsClickHandler();
+};
+
+var addTagsClickHandler = function addTagsClickHandler() {
+  document.querySelector('.strategies__tags').addEventListener('click', function (e) {
+    if (e.target.classList.contains('tag')) {
+      var clickedTag = e.target;
+      removeSelectedTags();
+      selectClickedTag(clickedTag);
+
+      if (clickedTag.innerText === 'All') {
+        showAllStrategies();
+      } else {
+        filterStrategyBySelectedTag(clickedTag.innerText);
+      }
+
+      ;
+    }
+
+    ;
+  });
+};
+
+var removeSelectedTags = function removeSelectedTags() {
+  var tags = document.querySelectorAll('.strategies__tags .tag');
+  tags.forEach(function (tag) {
+    tag.classList.remove('tag_selected');
+    tag.classList.add('tag_bordered');
+  });
+};
+
+var selectClickedTag = function selectClickedTag(clickedTag) {
+  clickedTag.classList.add('tag_selected');
+  clickedTag.classList.remove('tag_bordered');
+};
+
+var showAllStrategies = function showAllStrategies() {
+  var strategies = document.querySelectorAll('.strategy-wrapper .strategy');
+  strategies.forEach(function (strategy) {
+    strategy.classList.remove('strategy_hidden');
+  });
+};
+
+var filterStrategyBySelectedTag = function filterStrategyBySelectedTag(selectedTag) {
+  var strategies = document.querySelectorAll('.strategy-wrapper .strategy');
+  strategies.forEach(function (strategy) {
+    strategy.classList.add('strategy_hidden');
+    strategy.querySelectorAll('.tag').forEach(function (tag) {
+      if (tag.innerText === selectedTag) {
+        strategy.classList.remove('strategy_hidden');
+      }
+
+      ;
+    });
+  });
+};
+
+var renderArticlesToDom = function renderArticlesToDom() {
+  var strategiesWrapper = getStrategiesWrapper();
+  generateArticles(data).forEach(function (article) {
+    strategiesWrapper.append(article.generateArticle());
+  });
+  addStrategyClickHandler();
+};
+
+var getStrategiesWrapper = function getStrategiesWrapper() {
+  var strategiesContainer = document.querySelector('.strategy-wrapper');
+  strategiesContainer.innerHTML = '';
+  return strategiesContainer;
+};
+
+var generateArticles = function generateArticles(data) {
+  var articles = [];
+  data.forEach(function (article) {
+    articles.push(new _js_Article__WEBPACK_IMPORTED_MODULE_0__["Article"](article));
+  });
+  return articles;
+};
+
+var addStrategyClickHandler = function addStrategyClickHandler() {
+  document.querySelector('.strategy-wrapper').addEventListener('click', function (e) {
+    if (e.target.closest('.strategy')) {
+      var clickedStrategyId = e.target.closest('.strategy').getAttribute('data-id');
+      var clickedStrategyData = getClickedData(clickedStrategyId);
+      renderArticleModalWindow(clickedStrategyData);
+    }
+
+    ;
+  });
+};
+
+var getClickedData = function getClickedData(id) {
+  return data.find(function (article) {
+    return article.id == id;
+  });
+};
+
+var renderArticleModalWindow = function renderArticleModalWindow(content) {
+  var modal = new _js_ArticleModal__WEBPACK_IMPORTED_MODULE_1__["ArticleModal"]('article-modal', content);
+  modal.renderModal();
+};
+
+/***/ }),
+
+/***/ "./src/js/Article.js":
+/*!***************************!*\
+  !*** ./src/js/Article.js ***!
+  \***************************/
+/*! exports provided: Article */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Article", function() { return Article; });
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Article = /*#__PURE__*/function () {
+  function Article(_ref) {
+    var id = _ref.id,
+        title = _ref.title,
+        urlToImage = _ref.urlToImage,
+        tags = _ref.tags,
+        rest = _objectWithoutProperties(_ref, ["id", "title", "urlToImage", "tags"]);
+
+    _classCallCheck(this, Article);
+
+    this.id = id;
+    this.title = title;
+    this.urlToImage = urlToImage;
+    this.tags = tags;
+  } // Article generator
+
+
+  _createClass(Article, [{
+    key: "generateArticle",
+    value: function generateArticle() {
+      var template = '';
+      var article = document.createElement('article');
+      article.className = 'strategy block-shadowed';
+      article.setAttribute('data-id', this.id);
+      this.urlToImage && (template += "<img class=\"strategy__image\" src=".concat(this.urlToImage, " alt=\"strategy\">"));
+
+      if (this.title || this.tags) {
+        template += "<div class=\"strategy__content\">";
+        this.title && (template += "<h3 class=\"strategy__name\">".concat(this.title, "</h3>"));
+
+        if (this.tags) {
+          template += "<div class=\"strategy__tags tags\">";
+          this.tags.map(function (tag) {
+            template += "<span class=\"tag tag_colored\">".concat(tag, "</span>");
+          });
+          template += "</div>";
+        }
+
+        template += "</div>";
+      }
+
+      article.innerHTML = template;
+      return article;
+    }
+  }]);
+
+  return Article;
+}();
+
+/***/ }),
+
+/***/ "./src/js/ArticleModal.js":
+/*!********************************!*\
+  !*** ./src/js/ArticleModal.js ***!
+  \********************************/
+/*! exports provided: ArticleModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleModal", function() { return ArticleModal; });
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modal */ "./src/js/Modal.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+var ArticleModal = /*#__PURE__*/function (_Modal) {
+  _inherits(ArticleModal, _Modal);
+
+  var _super = _createSuper(ArticleModal);
+
+  function ArticleModal(classes, _ref) {
+    var _this;
+
+    var id = _ref.id,
+        title = _ref.title,
+        urlToImage = _ref.urlToImage,
+        tags = _ref.tags,
+        content = _ref.content,
+        date = _ref.date;
+
+    _classCallCheck(this, ArticleModal);
+
+    _this = _super.call(this, classes);
+    _this.id = id;
+    _this.title = title;
+    _this.urlToImage = urlToImage;
+    _this.tags = tags;
+    _this.content = content;
+    _this.date = date;
+    return _this;
+  }
+
+  _createClass(ArticleModal, [{
+    key: "generateContent",
+    // Article Modal generator
+    value: function generateContent() {
+      var template = '';
+      var content = document.createElement('div');
+      content.className = 'article-modal__content';
+      this.urlToImage && (template += "<img class=\"strategy__image\" src=".concat(this.urlToImage, " alt=\"strategy\">"));
+
+      if (this.title || this.tags || this.content || this.date) {
+        template += "<div class=\"strategy__content\">";
+        this.date && (template += "<p class=\"strategy__date\">".concat(this.date, "</p>"));
+        this.title && (template += "<h3 class=\"strategy__name\">".concat(this.title, "</h3>"));
+        this.content && (template += "<p class=\"strategy__text\">".concat(this.content, "</p>"));
+
+        if (this.tags) {
+          template += "<div class=\"strategy__tags tags\">";
+          this.tags.map(function (tag) {
+            template += "<span class=\"tag tag_colored\">".concat(tag, "</span>");
+          });
+          template += "</div>";
+        }
+
+        template += "</div>";
+      }
+
+      content.innerHTML = template;
+      return content;
+    }
+  }, {
+    key: "renderModal",
+    value: function renderModal() {
+      var content = this.generateContent();
+
+      _get(_getPrototypeOf(ArticleModal.prototype), "buildModal", this).call(this, content);
+    }
+  }]);
+
+  return ArticleModal;
+}(_Modal__WEBPACK_IMPORTED_MODULE_0__["Modal"]);
+
+/***/ }),
+
+/***/ "./src/js/Modal.js":
+/*!*************************!*\
+  !*** ./src/js/Modal.js ***!
+  \*************************/
+/*! exports provided: Modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return Modal; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Modal = /*#__PURE__*/function () {
+  function Modal(classes) {
+    _classCallCheck(this, Modal);
+
+    this.classes = classes;
+    this.modal = '';
+    this.modalContent = '';
+    this.modalCloseBtn = '';
+    this.overlay = '';
+  }
+
+  _createClass(Modal, [{
+    key: "buildModal",
+    value: function buildModal(content) {
+      //Overlay
+      this.overlay = this.createDomNode(this.overlay, 'div', 'overlay', 'overlay_modal'); //Modal
+
+      this.modal = this.createDomNode(this.modal, 'div', 'modal', this.classes); //Modal content
+
+      this.modalContent = this.createDomNode(this.modalContent, 'div', 'modal__content'); //Close Button
+
+      this.modalCloseBtn = this.createDomNode(this.modalCloseBtn, 'span', 'modal__close-icon');
+      this.modalCloseBtn.innerHTML = '<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4239 10.5172L20.6009 2.33999C21.1331 1.80809 21.1331 0.948089 20.6009 0.416194C20.069 -0.115701 19.209 -0.115701 18.6771 0.416194L10.4999 8.59343L2.3229 0.416194C1.79076 -0.115701 0.931004 -0.115701 0.399108 0.416194C-0.133036 0.948089 -0.133036 1.80809 0.399108 2.33999L8.5761 10.5172L0.399108 18.6945C-0.133036 19.2263 -0.133036 20.0863 0.399108 20.6182C0.664184 20.8836 1.01272 21.0169 1.361 21.0169C1.70929 21.0169 2.05758 20.8836 2.3229 20.6182L10.4999 12.441L18.6771 20.6182C18.9425 20.8836 19.2907 21.0169 19.639 21.0169C19.9873 21.0169 20.3356 20.8836 20.6009 20.6182C21.1331 20.0863 21.1331 19.2263 20.6009 18.6945L12.4239 10.5172Z" fill="#2F281E"/></svg>';
+      this.setContent(content);
+      this.appendModalElements(); // Bind Events
+
+      this.bindEvents(); // Open Modal
+
+      this.openModal();
+    }
+  }, {
+    key: "createDomNode",
+    value: function createDomNode(node, element) {
+      var _node$classList;
+
+      node = document.createElement(element);
+
+      for (var _len = arguments.length, classes = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        classes[_key - 2] = arguments[_key];
+      }
+
+      (_node$classList = node.classList).add.apply(_node$classList, classes);
+
+      return node;
+    }
+  }, {
+    key: "setContent",
+    value: function setContent(content) {
+      if (typeof content === 'string') {
+        this.modalContent.innerHTML = content;
+      } else {
+        this.modalContent.innerHTML = '';
+        this.modalContent.appendChild(content);
+      }
+    }
+  }, {
+    key: "appendModalElements",
+    value: function appendModalElements() {
+      this.modal.append(this.modalCloseBtn);
+      this.modal.append(this.modalContent);
+      this.overlay.append(this.modal);
+    }
+  }, {
+    key: "bindEvents",
+    value: function bindEvents() {
+      this.modalCloseBtn.addEventListener('click', this.closeModal);
+      this.overlay.addEventListener('click', this.closeModal);
+    }
+  }, {
+    key: "openModal",
+    value: function openModal() {
+      document.body.append(this.overlay);
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal(event) {
+      var classes = event.target.classList;
+
+      if (classes.contains('overlay') || classes.contains('modal__close-icon')) {
+        document.querySelector('.overlay').remove();
+      }
+    }
+  }]);
+
+  return Modal;
+}();
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=script.js.map
