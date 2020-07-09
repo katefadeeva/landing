@@ -1325,6 +1325,18 @@ h5 {
 .about-us {
   padding: 30px 0 100px 0;
 }
+@media (max-width: 1024px) {
+  .about-us {
+    overflow: hidden;
+    padding: 30px 0 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .about-us {
+    text-align: center;
+    padding: 30px 0 65px 0;
+  }
+}
 
 .about-us__title {
   margin: 0 0 14px;
@@ -1340,8 +1352,28 @@ h5 {
 @media (max-width: 1024px) {
   .employee-container {
     width: 1197px;
-    overflow: hidden;
     transform: translate3d(-12%, 0px, 0px);
+  }
+}
+@media (max-width: 768px) {
+  .employee-container {
+    transform: translate3d(-24%, 0px, 0px);
+  }
+}
+@media (max-width: 414px) {
+  .employee-container {
+    transform: translate3d(-35%, 0px, 0px);
+  }
+}
+@media (max-width: 320px) {
+  .employee-container {
+    transform: translate3d(-37%, 0px, 0px);
+  }
+}
+
+@media (max-width: 414px) {
+  .employee-container > * {
+    flex-basis: 26%;
   }
 }
 
@@ -1354,9 +1386,14 @@ h5 {
 }
 @media (max-width: 1024px) {
   .employee_selected {
-    opacity: 0.6;
+    opacity: 0.4;
     transform: scale3d(0.8, 0.8, 1);
     transition: all 0.3s ease-in-out;
+  }
+}
+@media (max-width: 414px) {
+  .employee {
+    padding: 20px;
   }
 }
 
@@ -1392,6 +1429,22 @@ h5 {
   right: -32px;
   top: 20px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 414px) {
+  .employee__photo {
+    width: 85px;
+    height: 85px;
+    right: -20px;
+    top: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .employee__photo {
+    width: 75px;
+    height: 75px;
+    right: -2px;
+    top: 11px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

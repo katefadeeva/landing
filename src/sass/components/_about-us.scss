@@ -2,6 +2,14 @@ $image-gap: 32px;
 
 .about-us {
   padding: 30px 0 100px 0;
+  @include media-bigtablet {
+    overflow: hidden;
+    padding: 30px 0 80px 0;
+  }
+  @include media-tablet {
+    text-align: center;
+    padding: 30px 0 65px 0;
+  }
 }
 
 .about-us__title {
@@ -16,8 +24,22 @@ $image-gap: 32px;
   padding-right: $image-gap;
   @include media-bigtablet {
     width: 1197px;
-    overflow: hidden;
     transform: translate3d(-12%, 0px, 0px);
+  }
+  @include media-tablet {
+    transform: translate3d(-24%, 0px, 0px);
+  }
+  @include media-mobile {
+    transform: translate3d(-35%, 0px, 0px);
+  }
+  @include media-mobilesmall {
+    transform: translate3d(-37%, 0px, 0px);
+  }
+}
+
+.employee-container >* {
+  @include media-mobile {
+    flex-basis: 26%;
   }
 }
 
@@ -29,10 +51,13 @@ $image-gap: 32px;
   transform: scale3d(1, 1, 1);
   &_selected {
     @include media-bigtablet {
-      opacity: 0.6;
+      opacity: 0.4;
       transform: scale3d(0.8, 0.8, 1);
       transition: all 0.3s ease-in-out;
     }
+  }
+  @include media-mobile {
+    padding: 20px;
   }
 }
 
@@ -62,4 +87,16 @@ $image-gap: 32px;
   right: -$image-gap;
   top: 20px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  @include media-mobile {
+    width: 85px;
+    height: 85px;
+    right: -20px;
+    top: 10px;
+  }
+  @include media-mobilesmall {
+    width: 75px;
+    height: 75px;
+    right: -2px;
+    top: 11px;
+  }
 }
