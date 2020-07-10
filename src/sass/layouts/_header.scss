@@ -42,6 +42,32 @@
     }
   }
   @include media-mobile {
-    display: none;
+    opacity: 0;
+    transition: 0.5s opacity;
+    position: absolute;
+    top: 370px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+}
+
+.header__buttons_opened {
+  @include media-mobile {
+    opacity: 1;    
+  }
+}
+
+.header__navigation_closed {
+  @include media-tablet {
+    opacity: 0;
+    transition: 0.5s opacity;
+  }
+}
+
+.header__navigation_opened {
+  @include media-tablet {
+    opacity: 1;
+    transition: 0.5s opacity;
   }
 }

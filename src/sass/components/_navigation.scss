@@ -2,20 +2,39 @@
   display: flex;
   font-size: 1.5rem;
   line-height: 2.8rem;
+  @include media-tablet {
+    display: block;
+    position: absolute;
+    @include font($size: 2.0rem, $height: 2.8rem, $weight: 400);
+    width: 100%;
+    background: $color-light;
+    padding: 35px 0;
+    top: 50px;
+    left: 0;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.05);
+  }
+  @include media-mobile {
+    top: 40px;
+  }
 }
 
 .navigation__link {
   list-style: none;
   padding: 0 10px;
   cursor: pointer;
-  @extend %transition;
   &:hover {
     color: $color-primary;
   }
-}
-
-.header__navigation {
   @include media-tablet {
-    display: none;
+    padding: 15px 0;
+    text-align: center;
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+  @include media-mobile {
+    &:last-child {
+      padding-bottom: 125px;
+    }
   }
 }

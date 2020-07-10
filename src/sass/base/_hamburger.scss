@@ -18,18 +18,32 @@
   }
   &:before {
     @extend %hamburger-line;
+    @extend %transition;
     top: 0;
     left: 0;
   }
   &:after {
     @extend %hamburger-line;
+    @extend %transition;
     bottom: 0;
     left: 0;
   }
 }
 
+.hamburger_opened {
+  &::before {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+  &::after {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+}
+
 .hamburger__line {
   @extend %hamburger-line;
+  @extend %transition;
   top: calc( 50% - 1.5px );
   left: 0;
 }

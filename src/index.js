@@ -78,6 +78,9 @@ window.onload = function() {
 
   // Tags
   addTagsClickHandler();
+
+  // Mobile Menu
+  openedHamburger ();
 };
 
 const addTagsClickHandler = () => {
@@ -169,3 +172,32 @@ const renderArticleModalWindow = (content) => {
   let modal =  new ArticleModal ('article-modal', content);
   modal.renderModal();
 };
+
+const openedHamburger = () => {
+  let menuBtn = document.querySelector('.hamburger');
+  let headerNavigation = document.querySelector('.header__navigation');
+  let headerBtn = document.querySelector('.header__buttons');
+
+  let menuIconClosed = 'header__hamburger hamburger';
+  let menuIconOpened = 'header__hamburger hamburger hamburger_opened';
+  let headerNavClosed = 'header__navigation header__navigation_closed';
+  let headerNavOpened = 'header__navigation header__navigation_opened';
+  let headerBtnClosed = 'header__buttons';
+  let headerBtnOpened = 'header__buttons header__buttons_opened'
+
+  menuBtn.addEventListener('click', () => {
+    if(menuBtn.className == menuIconClosed) {
+      menuBtn.className = menuIconOpened;
+      headerNavigation.className = headerNavOpened;
+      headerBtn.className = headerBtnOpened;
+      document.querySelector('.hamburger__line').style.display = 'none';
+      document.querySelector('body').style.overflow = 'hidden';
+    } else if(menuBtn.className == menuIconOpened) {
+      menuBtn.className = menuIconClosed;
+      headerNavigation.className = headerNavClosed;
+      headerBtn.className = headerBtnClosed;
+      document.querySelector('.hamburger__line').style.display = 'block';
+      document.querySelector('body').style.overflow = 'visible';
+    }
+  });
+}
