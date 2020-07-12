@@ -766,7 +766,7 @@ h5 {
 
 .modal {
   position: relative;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #FFFFFF;
   width: 675px;
   min-height: 120px;
@@ -775,7 +775,8 @@ h5 {
 }
 @media (max-width: 824px) {
   .modal {
-    width: 90%;
+    width: 80%;
+    margin-top: 130px;
   }
 }
 

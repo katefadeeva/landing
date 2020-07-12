@@ -60,12 +60,14 @@ export class Modal {
 
   openModal() {
     document.body.append(this.overlay);
+    document.querySelector('body').style.overflow = 'hidden';
   }
 
   closeModal(event) {
     let classes = event.target.classList;
     if(classes.contains('overlay') || classes.contains('modal__close-icon')) {
       document.querySelector('.overlay').remove();
+      document.querySelector('body').style.overflow = 'visible';
     }
   }
 } 

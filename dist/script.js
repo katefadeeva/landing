@@ -567,6 +567,7 @@ var Modal = /*#__PURE__*/function () {
     key: "openModal",
     value: function openModal() {
       document.body.append(this.overlay);
+      document.querySelector('body').style.overflow = 'hidden';
     }
   }, {
     key: "closeModal",
@@ -575,6 +576,7 @@ var Modal = /*#__PURE__*/function () {
 
       if (classes.contains('overlay') || classes.contains('modal__close-icon')) {
         document.querySelector('.overlay').remove();
+        document.querySelector('body').style.overflow = 'visible';
       }
     }
   }]);
